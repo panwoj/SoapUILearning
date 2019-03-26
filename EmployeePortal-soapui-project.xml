@@ -601,7 +601,7 @@ declare namespace ax21='http://exception.reservation.sample.com/xsd';
          <typ:employeeName>Tym23</typ:employeeName>
       </typ:deleteEmployee>
    </soap:Body>
-</soap:Envelope>]]></con:request><con:assertion type="SOAP Response" id="7853133c-39fa-4a3c-863c-5ce7ab4d5e6e"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="acbc7882-c676-4ce0-8a20-ee4c7910acd8" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Script" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Groovy Script" id="d6b36b31-4968-4c61-958c-5b4a5e194813"><con:settings/><con:config><script>import com.eviware.soapui.support.XmlHolder
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="acbc7882-c676-4ce0-8a20-ee4c7910acd8" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Script" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Groovy Script" id="d6b36b31-4968-4c61-958c-5b4a5e194813"><con:settings/><con:config><script>import com.eviware.soapui.support.XmlHolder
 import com.eviware.soapui.impl.wsdl.testcase.WsdlTestRunContext
 
 //***log.info TESTING***//
@@ -668,6 +668,7 @@ testRunner.testCase.testSuite.testCases["DeleEmp"].testSteps["del"].setPropertyV
 def delTestStep = testRunner.testCase.testSuite.testCases["DeleEmp"].testSteps["del"]
 def delWsdlContext = new WsdlTestRunContext(delTestStep)
 delTestStep.run(testRunner, delWsdlContext)
+log.info "ok"
 
 
 
